@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Are you ready? Button</title>
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Synchronize people.">
+
+    <link href="static/css/screen.css?8" rel="stylesheet"></link>
+    <link href="/static/images/icon_128x128.png" rel="shortcut icon" type="image/icon"></link>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <form id="choose-name" onsubmit="return false;">
+        <input type="text" name="name" placeholder="Anonymoose" /> <input type="submit" value="Choose a name" />
+    </form>
+
+    <form id="chat" onsubmit="return false;" style="display:none;">
+        <ul id="log"></ul>
+        <input type="text" name="msg" placeholder="..." /> <input type="submit" value="Send" />
+    </form>
+</div>
+
+<script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="static/js/core.js"></script>
+<script src="static/js/client.js"></script>
+
+</body>
+
+</html>

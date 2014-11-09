@@ -1,0 +1,201 @@
+@import "_base";
+
+@mixin arrow($_background, $_width) {
+    position: relative;
+    background: $_background;
+
+    &:after {
+        left: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+
+        border-left-color: $_background;
+        border-width: $_width;
+        margin-top: -$_width;
+    }
+}
+
+footer {
+    @include container;
+    font-size: 0.8em;
+    border-top: 5px solid #ddd;
+    text-align: center;
+    margin: 5em auto 1em auto;
+    padding-top: 0.5em;
+    background: #f8f8f8;
+
+    li {
+        margin-left: 1em;
+        text-align: left;
+    }
+}
+
+
+
+#share {
+    margin-top: 0;
+    background: #f0f0de;
+    color: #84847a;
+    font-size: 14px;
+    line-height: 36px;
+
+    a {
+        text-decoration: underline;
+    }
+    a.share-link {
+        color: lighten(#84847a, 10%);
+    }
+
+    h1 {
+        display: inline;
+        font-size: 18px;
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+    }
+
+    .container {
+        padding: 0 0 0 4em;
+    }
+
+    .share-text {
+        display: inline;
+    }
+}
+
+.not-available {
+    text-decoration: line-through;
+}
+
+h2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 2em 0 0 2em;
+}
+
+#history {
+    overflow: hidden;
+    margin-left: 2em;
+
+    li {
+        color: #aaa;
+        float: left;
+        width: 195px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+#best {
+    overflow: hidden;
+
+    li {
+        float: left;
+        width: 195px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+#result li.not-available {
+    margin-left: 2em;
+}
+
+#intro {
+    background: #eee;
+    padding: 10px 20px;
+    margin-top: 3em;
+    font-size: 14px;
+
+    strong {
+        color: #111;
+    }
+}
+
+.available, .available a {
+    color: #5c9407;
+}
+
+.control {
+    cursor: pointer;
+    float: left;
+
+    span {
+        margin: 0 0.5em;
+    }
+}
+.active .control {
+    cursor: default;
+}
+
+.saved > span:before, .save:hover > span:before, .active .save > span:before {
+    content: "★";
+    color: #f8bc1a;
+}
+
+.saved:hover > span:before, .save > span:before {
+    content: "☆";
+    color: #aaa;
+}
+
+form {
+    margin-left: 1.5em;
+    margin-top: 2em;
+}
+
+#query.loading {
+    background-position: right 20px center;
+    background-repeat: no-repeat;
+    background-image: url("/static/images/throbber.gif");
+}
+
+.tip {
+    position: absolute;
+    background: #333;
+    color: #eee;
+    font-size: 0.7em;
+    padding: 2px 6px;
+    font-family: sans-serif;
+
+    .arrow {
+        @include arrow(#fff, 5px);
+    }
+}
+
+.tagline {
+    font-weight: bold;
+    color: darken($color-text, 10%);
+}
+
+#thanks, #thanks-again {
+    font-size: 14px;
+    width: 165px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    margin-right: 10px;
+    z-index: 10;
+
+    a {
+        color: #e5722d;
+    }
+
+    .red {
+        color: red;
+    }
+}
+
+#thanks-again {
+    display: none;
+    line-height: 50px;
+    right: inherit;
+    text-align: left;
+    margin-left: 500px;
+}
