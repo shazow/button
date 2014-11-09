@@ -4,7 +4,7 @@ serve:
 	python -m SimpleHTTPServer
 
 deploy:
-	echo "TODO"
+	git push origin master:gh-pages
 
 ## CSS:
 
