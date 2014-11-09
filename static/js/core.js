@@ -1,6 +1,7 @@
 var PEERJS_CONFIG = {
     'host': 'button-peerjs.herokuapp.com',
-    'port': 80,
+    'port': 443,
+    'secure': true,
     'config': {
         'iceServers': [
             {'url': 'stun:stun.l.google.com:19302' }
