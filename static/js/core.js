@@ -1,5 +1,6 @@
 var PEERJS_CONFIG = {
-    'key': 'k9epv4abgdd6ajor',
+    'host': 'button-peerjs.herokuapp.com',
+    'port': 80,
     'config': {
         'iceServers': [
             {'url': 'stun:stun.l.google.com:19302' }
@@ -80,5 +81,5 @@ $(function() {
 
         $('form#chat').show();
     });
-    
 });
+
